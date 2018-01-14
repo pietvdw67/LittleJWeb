@@ -1,0 +1,1 @@
+<input type="image" src="images/base/submit.png" alt="Submit" width="40" height="40" />

@@ -1,0 +1,17 @@
+Body background:
+style=desktop
+#main background  (black)
+
+table header background)
+style.css
+th background-color
+
+
+Colors:
+light green: #62FF4A ( for buttons, headings etc )
+dark green: #073700  ( for writing on dark green)
+
+light gray: 202020 ( for writing on black background)
+alternating gray for tables :
+	#404040 ( light row ) font light green
+	#505050 ( dark row ) font light green

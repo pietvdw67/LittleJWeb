@@ -1,0 +1,37 @@
+<?xml version="1.0" ?> 
+<project name="littleJWeb to raspberry" default="deploy">
+	<property name="dir.buildfile" value="."/>
+	<property name="raspberryName" value="Raspberry_Test"/>
+	<property name="raspberryIp" value="192.168.1.61"/>
+	
+	<path id="compile.classpath">
+		<fileset dir="WebContent/WEB-INF/lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+	
+	<target name="init">		
+		<echo>Preparing dist folder</echo>			
+		<delete dir="dist" />
+		<mkdir dir="dist" />
+	</target>
+	
+	<target name="compile" depends="init" >		
+		<echo>compiling source to classes folder</echo>
+		<javac srcdir="src" destdir="WebContent/WEB-INF/classes" />
+	</target>
+	
+	<target name="war" depends="init">
+		<war destfile="dist/littlej.war" webxml="WebContent/WEB-INF/web.xml">
+			<fileset dir="WebContent"/>
+			<lib dir="WebContent/WEB-INF/lib"/>
+			<classes dir="WebContent/WEB-INF/classes"/>
+		</war>
+	</target>
+	
+	<target name="deploy" depends="war" >
+		<echo>Deploying war to ${raspberryName}</echo>
+		<scp file="dist/littlej.war" sftp="true" trust="true" todir="pi:raspberry@${raspberryIp}:/home/pi/apps/apache-tomcat-9.0.0.M22/webapps/littlej.war" />
+	</target>
+	
+</project>

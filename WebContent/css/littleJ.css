@@ -1,0 +1,84 @@
+@media screen and (max-device-width : 1024px) {
+    body {
+		background-image: url("/MyHome/images/background_phone.jpg");		
+		margin-left:3%;			
+    }
+}
+
+@media screen and (min-device-width: 1025px) {
+    body {
+		background-image: url("/MyHome/images/background.jpg");
+		margin-left:15%;
+		margin-right:15%;		
+    }
+}
+
+.main_body_content {	
+	background-color:white;	
+}
+
+@media screen and (max-device-width : 1024px) {
+    .main_body_content_inner {
+		margin-left:3%;		
+		margin-top:3%;		
+		margin-bottom:3%;		
+    }
+}
+
+@media screen and (min-device-width: 1025px) {
+    .main_body_content_inner {
+		margin:3%;		
+    }
+}
+
+h1 {	
+	padding-top:1%;
+	padding-bottom:1%;	
+	text-align: center;
+	font-family: 'Belleza', sans-serif;	
+	font-size:48px;	
+	background-image: url("/MyHome/images/seemlesswood5.jpg");
+	
+	color:#785546;
+}
+
+h2 {
+	font-family: 'Belleza', sans-serif;	
+	color:#785546;
+}
+
+.panel_color {
+	padding:1%;
+	background-color:#332721;
+}
+
+th {
+	font-family: 'Quando', sans;
+	background-color: #A6725A;
+	border: 2px solid black; 
+    border-collapse:collapse; 
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:10px;
+	padding-right:10px;
+}
+table,td {
+	font-family: 'Quando', sans;
+	border: 2px solid black; 
+    border-collapse:collapse; 	
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+td {
+	color:black;
+}
+
+tr:nth-child(even) {
+	background-color: #A6725A;
+}
+tr:nth-child(odd) {
+	background-color: #785546;
+}

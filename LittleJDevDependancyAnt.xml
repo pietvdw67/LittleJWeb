@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="littleJWeb Dev dependancies" default="devDependancies">
+	<property name="dir.buildfile" value="."/>
+	<property name="workspace" value="${dir.buildfile}/.."/>
+	<property name="infinity" value="${dir.buildfile}/../Infinity"/>
+	<property name="littleJ" value="${dir.buildfile}/../LittleJ"/>
+	
+	<target name = "devDependancies" depends="distInfinity,distLittleJ">
+		<echo>littjeJ and Infinity distributed</echo>
+	
+	</target>
+	
+	<target name = "prepareInfinity">
+		<echo>Preparing infinity dist folder</echo>			
+		<delete dir="${infinity}/dist" />
+		<mkdir dir="${infinity}/dist" />
+	</target>
+	
+	<target name="compileInfinity" depends="prepareInfinity" >
+		<echo>compiling infinity</echo>
+		<javac srcdir="${infinity}/src" destdir="${infinity}/bin" />		
+	</target>
+	
+	<target name="deployInfinity" depends="compileInfinity" >
+		<echo>creating infinity jar</echo>
+		<jar destfile="${infinity}/dist/infinity.jar" basedir="${infinity}/bin" >
+			<zipfileset excludes="META-INF/*.SF" src="D:/jars/mysql-connector-java-5.1.41-bin.jar"/>
+		</jar>
+	</target>
+	
+	<target name="distInfinity" depends="deployInfinity" >
+		<echo>copying infinity.jar to lib</echo>
+		<copy file="${infinity}/dist/infinity.jar" todir="WebContent/WEB-INF/lib"/>		
+	</target>	
+	
+	<target name = "prepareLittleJ">
+		<echo>Preparing littleJ dist folder</echo>			
+		<delete dir="${littleJ}/dist" />
+		<mkdir dir="${littleJ}/dist" />
+	</target>
+	
+	<target name="compileLittleJ" depends="prepareLittleJ" >
+		<echo>compiling littleJ</echo>
+		<javac srcdir="${littleJ}/src" destdir="${littleJ}/bin" />		
+	</target>
+	
+	<target name="deployLittleJ" depends="compileLittleJ" >
+		<echo>creating littleJ jar</echo>
+		<jar destfile="${littleJ}/dist/littleJ.jar" basedir="${littleJ}/bin" />
+	</target>
+	
+	<target name="distLittleJ" depends="deployLittleJ" >
+		<echo>copying littleJ.jar to lib</echo>
+		<copy file="${littleJ}/dist/littleJ.jar" todir="WebContent/WEB-INF/lib"/>		
+	</target>
+	
+</project>

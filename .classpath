@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/LittleJ"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/littleJ.jar"/>
+	<classpathentry kind="lib" path="D:/jars/apache/javax.servlet.jar"/>
+	<classpathentry kind="lib" path="D:/jars/apache/javax.servlet.jsp.jar"/>
+	<classpathentry kind="lib" path="D:/jars/json-taglib-0.4.1.jar"/>
+	<classpathentry kind="lib" path="D:/jars/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="D:/jars/taglibs-standard-impl-1.2.5.jar"/>
+	<classpathentry kind="lib" path="D:/jars/taglibs-standard-jstlel-1.2.5.jar"/>
+	<classpathentry kind="lib" path="D:/jars/taglibs-standard-spec-1.2.5.jar"/>
+	<classpathentry kind="lib" path="D:/jars/mysql-connector-java-5.1.41-bin.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/InfinityDB"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/InfinityUtils"/>
+	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
+</classpath>
